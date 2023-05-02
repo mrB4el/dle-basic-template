@@ -1,0 +1,39 @@
+:root {
+    --color-background:rgba(225, 225, 225, 1);
+    --color-input: rgba(225, 225, 225, 1);
+    --color-text: rgba(81, 81, 81, 1);
+    --color-hover: rgba(0, 0, 0, 0.8);
+    --color-main: #009625; /* rgb(16, 124, 16) */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background:rgba(225, 225, 225, 1);
+        --color-input: rgba(225, 225, 225, 1);
+        --color-text: rgba(81, 81, 81, 1);
+        --color-hover: rgba(0, 0, 0, 0.8);
+        --color-main: #009625; /* rgb(16, 124, 16) */
+    }
+  }
+
+@media (min-width: 700px)
+{
+    :root {
+        --scale-value: 10em;
+    }
+}
+
+@media (min-width: 1300px)
+{
+    :root {
+        --scale-value: 15em;
+    }
+}
+
+@media (min-width: 1620px)
+{
+    :root {
+        --scale-value: 20em;
+    }
+}
+

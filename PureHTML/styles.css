@@ -1,0 +1,66 @@
+:root {
+    --bg-color: #fff;
+    /* default background color for light theme */
+    --text-color: #333;
+    /* default text color for light theme */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #222;
+        /* background color for dark theme */
+        --text-color: #eee;
+        /* text color for dark theme */
+    }
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ccc;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    background-color: #f2f2f2;
+    flex-basis: 25%;
+    min-height: 300px;
+    padding: 20px;
+}
+
+.content {
+    flex-basis: 75%;
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-wrap: nowrap;
+    }
+
+    .sidebar {
+        flex-basis: 100%;
+        order: 2;
+    }
+
+    .content {
+        flex-basis: 100%;
+        order: 1;
+    }
+}
+
+footer {
+    background-color: #ccc;
+    padding: 20px;
+}

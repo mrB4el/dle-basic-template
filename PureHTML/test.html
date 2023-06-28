@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Base styles */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px;
+    }
+    .container {
+      display: flex;
+    }
+    .content {
+      flex: 1;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #ddd;
+      padding: 20px;
+    }
+    .menu-icon {
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    /* Hide the menu checkbox visually */
+    .menu-checkbox {
+      display: none;
+    }
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        display: none;
+      }
+      .menu-icon {
+        display: block;
+      }
+      .menu-checkbox:checked ~ .container .sidebar {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Website Title</h1>
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+  </header>
+  <div class="container">
+    <div class="sidebar">
+      <!-- Sidebar content goes here -->
+      <h2>Sidebar</h2>
+      <p>This is the sidebar content.</p>
+    </div>
+    <div class="content">
+      <!-- Main content goes here -->
+      <h1>Main Content</h1>
+      <p>This is the main content of the page.</p>
+    </div>
+  </div>
+</body>
+</html>
